@@ -43,6 +43,7 @@ if (playerMove == "1") {
     printMessage("Mój ruch nr 1");
 } else {
     playerMove = "nieznanyRuch";
+    printMessage("nieznanyRuch");
 }
 
 
