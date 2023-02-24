@@ -7,17 +7,45 @@ console.log("Wylosowana liczba to: " + randomNumber);
 
 /*computerMove */
 
-let computerMove = "nieznanyRuch";
-if (randomNumber == 1) {
-    printMessage("Ruch komputera nr 1");
-    computerMove = "kamień";
-} else if (randomNumber == 2) {
-    printMessage("Ruch komputera nr 2");
-    computerMove = "papier";
-} else if ((randomNumber = 3)) {
-    printMessage("Ruch komputera nr 3");
-    computerMove = "nożyce";
+let computerMove = getMoveName(randomNumber);
+
+/* argMoveId - przydałoby się to określić, ale jest przecież jako funkcja,
+to poniższy kod niepotrzebny */
+
+/*
+    if(randomNumber == 1) {
+        printMessage("Ruch komputera nr 1");
+        computerMove = "kamień";
+    } else if(randomNumber == 2) {
+        printMessage("Ruch komputera nr 2");
+        computerMove = "papier";
+    } else if(randomNumber == 3) {
+        printMessage("Ruch komputera nr 3");
+        computerMove = "nożyce";
+    }
 }
+/*
+
+/* "nieznanyRuch";
+
+if(randomNumber == 1){
+    printMessage("Mój ruch to kamień");
+    ComputerMove == "kamień";
+    if else(randomNumber ==2){
+        printMessage("Mój ruch to papier")
+        ComputerMove = "papier";
+        if else(randomNumber == 3){
+            printMessage("Mój ruch to nożyce");
+            ComputerMove == "nożyce";
+            else {
+                printMessage("NieznanyRuch")
+            }
+        }
+    }
+}
+*/
+
+
 
 printMessage("Komputer losuje: " + computerMove);
 
@@ -78,8 +106,3 @@ if (computerMove == "nożyce" && playerMove == "papier") {
 if (computerMove == "nożyce" && playerMove == "kamień") {
     printMessage("Wygrałeś!");
 }
-/*
-if(playerMove !=1 || !=2  !=3) {
-    printMessage('Szanuj zasady');
-}
-*/
