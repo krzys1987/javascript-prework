@@ -68,14 +68,14 @@ if (playerMove == "1") {
     printMessage("Mój ruch nr 2");
 } else if (randomNumber == 3) {
     playerMove = "kamień";
-    printMessage("Mój ruch nr 1");
+    printMessage("Mój wynik o ruch nr 1");
 } else {
     playerMove = "nieznanyRuch";
-    printMessage("nieznanyRuch");
+    printMessage("Losuj ponownie");
 }
 
 
-printMessage("Mój ruch to: " + playerMove);
+printMessage("Mój wynik, to: " + playerMove);
 
 /* Results evaluation */
 
