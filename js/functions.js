@@ -32,6 +32,7 @@ function getMoveName(moveId) {
 }
 function displayResult(computerMove, playerMove) {
 	printMessage("Zagrałem" + computerMove + ", a Ty" + playerMove);
+	console.log('moves:', argComputerMove, argPlayerMove);
 		if (computerMove == "papier" && playerMove == "papier") {
 			printMessage("Remis!");
 		}
@@ -65,4 +66,7 @@ function displayResult(computerMove, playerMove) {
 		if (playerMove = "nieznanyRuch") {
 			printMessage("Losuj ponownie");
 		}
+		/*if (computerMove = "nieznanyRuch") { /*cholera wie, dlaczego nie działa
+			printMessage("Losuj ponownie");
+		} */
 }
