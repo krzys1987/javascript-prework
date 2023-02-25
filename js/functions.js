@@ -30,7 +30,7 @@ function getMoveName(moveId) {
 	}
 
 }
-function gameResults(computerMove, playerMove) {
+function displayResult(computerMove, playerMove) {
 	printMessage("Zagrałem" + computerMove + ", a Ty" + playerMove);
 		if (computerMove == "papier" && playerMove == "papier") {
 			printMessage("Remis!");
