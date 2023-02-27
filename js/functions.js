@@ -31,14 +31,8 @@ function getMoveName(moveId) {
 function displayResult(computerMove, playerMove) {
 	printMessage("Zagrałem" + computerMove + ", a Ty" + playerMove);
 	console.log('moves:', argComputerMove, argPlayerMove);
-		if (computerMove == "papier" && playerMove == "papier") {
-			printMessage("Remis!");
-		}
-		if (computerMove == "kamień" && playerMove == "kamień") {
-			printMessage("Remis!");
-		}
-		if (computerMove == "nożyce" && playerMove == "nożyce") {
-			printMessage("Remis!");
+		if (computerMove == playerMove) {
+			printMessage("Remis");
 		}
 		if (computerMove == "papier" && playerMove == "kamień") {
 			printMessage("Przegrałeś!");
