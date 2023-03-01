@@ -12,22 +12,7 @@ function clearMessages(){
 	document.getElementById('messages').innerHTML = '';
 }
 
-function getMoveName(moveId) {
-	if(moveId == 1){
-		printMessage("Wynik to ruch nr 1, czyli: ");
-		return "kamień";
-	} else if(moveId == 2){
-		printMessage("Wynik to ruch nr 2, czyli: ");
-		return "papier";
-	} else if(moveId == 3){
-		printMessage("Wynik to ruch nr 3, czyli: ");
-		return "nożyce";
-	} else {
-		printMessage("Nie wiem, co znaczy" + moveId );
-		return "nieznanyRuch";
-	}
 
-}
 function displayResult(computerMove, playerMove) {
 	printMessage("Zagrałem" + computerMove + ", a Ty" + playerMove);
 	console.log('moves:', ComputerMove, PlayerMove);

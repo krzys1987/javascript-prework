@@ -27,15 +27,35 @@ if(randomNumber == 1) {
 
 printMessage("Komputer losuje: " + computerMove);
 
+
+
+/*Functions */
+let playerInput = prompt("Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.");
+let moveId = playerInput;
+
+function getMoveName(moveId) {
+	if(moveId == 1){
+		printMessage("Wynik to ruch nr 1, czyli: ");
+		return "kamień";
+	} else if(moveId == 2){
+		printMessage("Wynik to ruch nr 2, czyli: ");
+		return "papier";
+	} else if(moveId == 3){
+		printMessage("Wynik to ruch nr 3, czyli: ");
+		return "nożyce";
+	} else {
+		printMessage("Nie wiem, co znaczy" + moveId );
+		return "nieznanyRuch";
+	}
+
+}
+
+let playerMove = getMoveName(moveId);
+
 /*playerMove */
 
 console.log("NoughtAndCrosses");
 console.log("playerMove");
-
-let playerInput = prompt("Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.");
-let moveId = playerInput;
-let playerMove = getMoveName(moveId);
-
 console.log("Gracz wpisał: " + playerInput);
 
 printMessage(playerMove);
