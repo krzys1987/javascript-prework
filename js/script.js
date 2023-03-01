@@ -25,7 +25,7 @@ if(randomNumber == 1) {
 }
 */
 
-printMessage("Komputer losuje: " + computerMove);
+/* printMessage("Komputer losuje: " + computerMove);
 
 
 
@@ -58,12 +58,12 @@ console.log("NoughtAndCrosses");
 console.log("playerMove");
 console.log("Gracz wpisał: " + playerInput);
 
-printMessage(playerMove);
+/* printMessage("Wylosowałem:+playerMove); */
 
 /* dodałem && pomiędzy i coś ruszyło, tylko muszę poprawić, bo głupoty na ekranie */
 displayResult(computerMove && playerMove);
 
-
+printMessage("Mój wynik, to: " + playerMove);
 
 
 /* function playerMove = getMoveName(playerMove);
@@ -85,7 +85,7 @@ if (playerInput == "1") {
     printMessage("Losuj ponownie");
 }
 
-printMessage("Mój wynik, to: " + playerMove);
+
 
 */
 
