@@ -5,15 +5,14 @@ let randomNumber = Math.floor(Math.random() * 3 + 1);
 
 console.log("Wylosowana liczba to: " + randomNumber);
 
+
+
 /*computerMove */
 
 /* pojawil się problem z poniższą deklaracją, spróbuję ją zakomentować
 let computerMove = getMoveName(randomNumber); */
 
-let computerMove = "nieznanyRuch"; /* zgodnie z z poleceniem zadania zmieniłem i teraz cały czas
-komputer losuje nieznanyRuch */
-
-
+let computerMove = "nieznanyRuch";
 if(randomNumber == 1) {
     printMessage("Ruch komputera nr 1");
     computerMove = "kamień";
@@ -24,32 +23,6 @@ if(randomNumber == 1) {
     printMessage("Ruch komputera nr 3");
     computerMove = "nożyce";
 }
-
-
-/* argMoveId - przydałoby się to określić, ale jest przecież jako funkcja,
-to poniższy kod niepotrzebny */
-
-/*
-
-
-if(randomNumber == 1){
-    printMessage("Mój ruch to kamień");
-    ComputerMove == "kamień";
-    if else(randomNumber ==2){
-        printMessage("Mój ruch to papier")
-        ComputerMove = "papier";
-        if else(randomNumber == 3){
-            printMessage("Mój ruch to nożyce");
-            ComputerMove == "nożyce";
-            else {
-                printMessage("NieznanyRuch")
-            }
-        }
-    }
-}
-
-
-
 
 printMessage("Komputer losuje: " + computerMove);
 
@@ -64,13 +37,13 @@ console.log("Gracz wpisał: " + playerInput);
 
 let playerMove = "nieznanyRuch";
 
-if (playerMove == "1") {
+if (playerInput == "1") {
     printMessage("Mój ruch nr 3");
     playerMove = "nożyce";
-} else if (randomNumber == 2) {
+} else if (playerInput == 2) {
     playerMove = "papier";
     printMessage("Mój ruch nr 2");
-} else if (randomNumber == 3) {
+} else if (playerInput == 3) {
     playerMove = "kamień";
     printMessage("Mój wynik o ruch nr 1");
 } else {
