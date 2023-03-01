@@ -51,19 +51,12 @@ if (playerInput == "1") {
     printMessage("Losuj ponownie");
 }
 
-
 printMessage("Mój wynik, to: " + playerMove);
 
 /* Results evaluation */
 
-if (computerMove == "papier" && playerMove == "papier") {
-    printMessage("Remis!");
-}
-if (computerMove == "kamień" && playerMove == "kamień") {
-    printMessage("Remis!");
-}
-if (computerMove == "nożyce" && playerMove == "nożyce") {
-    printMessage("Remis!");
+if (computerMove == playerMove) {
+    printMessage("Remis")
 }
 if (computerMove == "papier" && playerMove == "kamień") {
     printMessage("Przegrałeś!");
