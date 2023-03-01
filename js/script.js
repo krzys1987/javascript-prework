@@ -9,10 +9,10 @@ console.log("Wylosowana liczba to: " + randomNumber);
 
 /*computerMove */
 
-/* pojawil się problem z poniższą deklaracją, spróbuję ją zakomentować
-let computerMove = getMoveName(randomNumber); */
-
+let computerMove = getMoveName(randomNumber);
+/*
 let computerMove = "nieznanyRuch";
+/*
 if(randomNumber == 1) {
     printMessage("Ruch komputera nr 1");
     computerMove = "kamień";
@@ -23,15 +23,9 @@ if(randomNumber == 1) {
     printMessage("Ruch komputera nr 3");
     computerMove = "nożyce";
 }
+*/
 
 printMessage("Komputer losuje: " + computerMove);
-
-/* fukcje nie działają i psują wszytko
-
-function getMoveName (moveId) {
-    if randomNumber == 1;
-    return kamień;
-}
 
 /*playerMove */
 
@@ -39,9 +33,17 @@ console.log("NoughtAndCrosses");
 console.log("playerMove");
 
 let playerInput = prompt("Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.");
+let moveId = playerInput;
+let playerMove = getMoveName(moveId);
 
 console.log("Gracz wpisał: " + playerInput);
 
+printMessage(playerMove);
+
+
+/* function playerMove = getMoveName(playerMove);
+
+/*
 let playerMove = "nieznanyRuch";
 
 if (playerInput == "1") {
@@ -60,7 +62,13 @@ if (playerInput == "1") {
 
 printMessage("Mój wynik, to: " + playerMove);
 
+*/
+
 /* Results evaluation */
+
+/* wyświetlanie wyników rozwala wszystko,
+let displayResult(playerMove);
+*/
 
 if (computerMove == playerMove) {
     printMessage("Remis")

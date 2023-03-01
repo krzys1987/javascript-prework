@@ -23,14 +23,14 @@ function getMoveName(moveId) {
 		printMessage("Wynik to ruch nr 3, czyli: ");
 		return "nożyce";
 	} else {
-		printMessage("Nie wiem, co znaczy + moveId ");
-		return "nieznany+Ruch";
+		printMessage("Nie wiem, co znaczy" + moveId );
+		return "nieznanyRuch";
 	}
-}
 
+}
 function displayResult(computerMove, playerMove) {
 	printMessage("Zagrałem" + computerMove + ", a Ty" + playerMove);
-	console.log('moves:', argComputerMove, argPlayerMove);
+	console.log('moves:', ComputerMove, PlayerMove);
 		if (computerMove == playerMove) {
 			printMessage("Remis");
 		}
@@ -58,7 +58,4 @@ function displayResult(computerMove, playerMove) {
 		if (playerMove = "nieznanyRuch") {
 			printMessage("Losuj ponownie");
 		}
-		/*if (computerMove = "nieznanyRuch") { /*cholera wie, dlaczego nie działa
-			printMessage("Losuj ponownie");
-		} */
-}
+	}
