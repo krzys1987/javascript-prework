@@ -60,6 +60,11 @@ console.log("Gracz wpisał: " + playerInput);
 
 printMessage(playerMove);
 
+/* dodałem && pomiędzy i coś ruszyło, tylko muszę poprawić, bo głupoty na ekranie */
+displayResult(computerMove && playerMove);
+
+
+
 
 /* function playerMove = getMoveName(playerMove);
 
