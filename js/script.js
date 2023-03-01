@@ -26,6 +26,13 @@ if(randomNumber == 1) {
 
 printMessage("Komputer losuje: " + computerMove);
 
+/* fukcje nie działają i psują wszytko
+
+function getMoveName (moveId) {
+    if randomNumber == 1;
+    return kamień;
+}
+
 /*playerMove */
 
 console.log("NoughtAndCrosses");

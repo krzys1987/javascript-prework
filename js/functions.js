@@ -23,11 +23,11 @@ function getMoveName(moveId) {
 		printMessage("Wynik to ruch nr 3, czyli: ");
 		return "nożyce";
 	} else {
-		printMessage("Nie wiem, co znaczy +moveId ");
-		return "nieznanyRuch";
+		printMessage("Nie wiem, co znaczy + moveId ");
+		return "nieznany+Ruch";
 	}
-
 }
+
 function displayResult(computerMove, playerMove) {
 	printMessage("Zagrałem" + computerMove + ", a Ty" + playerMove);
 	console.log('moves:', argComputerMove, argPlayerMove);
