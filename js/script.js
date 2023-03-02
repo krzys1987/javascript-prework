@@ -1,15 +1,30 @@
-/* General */
+/*computerMove */
 console.log("NoughtAndCrosses");
 console.log("computerMove");
-let randomNumber = Math.floor(Math.random() * 3 + 1);
 
+let randomNumber = Math.floor(Math.random() * 3 + 1);
 console.log("Wylosowana liczba to: " + randomNumber);
 
-
-
-/*computerMove */
-
 let computerMove = getMoveName(randomNumber);
+
+function getMoveName(moveId) {
+	if(moveId == 1){
+		printMessage("Wynik to ruch nr 1, czyli: ");
+		return "kamień";
+	} else if(moveId == 2){
+		printMessage("Wynik to ruch nr 2, czyli: ");
+		return "papier";
+	} else if(moveId == 3){
+		printMessage("Wynik to ruch nr 3, czyli: ");
+		return "nożyce";
+	} else {
+		printMessage("Nie wiem, co znaczy" + moveId );
+		return "nieznanyRuch";
+	}
+
+}
+
+printMessage("Komputer losuje: " + computerMove);
 /*
 let computerMove = "nieznanyRuch";
 /*
@@ -29,40 +44,20 @@ if(randomNumber == 1) {
 
 
 
-/*Functions */
-let playerInput = prompt("Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.");
-let moveId = playerInput;
-
-function getMoveName(moveId) {
-	if(moveId == 1){
-		printMessage("Wynik to ruch nr 1, czyli: ");
-		return "kamień";
-	} else if(moveId == 2){
-		printMessage("Wynik to ruch nr 2, czyli: ");
-		return "papier";
-	} else if(moveId == 3){
-		printMessage("Wynik to ruch nr 3, czyli: ");
-		return "nożyce";
-	} else {
-		printMessage("Nie wiem, co znaczy" + moveId );
-		return "nieznanyRuch";
-	}
-
-}
 
 
 /*playerMove */
 
+let playerInput = prompt("Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.");
+let moveId = playerInput;
+
 console.log("NoughtAndCrosses");
 console.log("playerMove");
 console.log("Gracz wpisał: " + playerInput);
-/* console.log("Gracz wpisał: " + getMoveName(getMoveName) ); */
+console.log(displayResult(playerInput));
+
+
 let playerMove = getMoveName(moveId);
-
-/* printMessage("Wylosowałem:+playerMove); */
-
-/* dodałem && pomiędzy i coś ruszyło, tylko muszę poprawić, bo głupoty na ekranie */
-displayResult(computerMove && playerMove);
 
 printMessage("Mój wynik, to: " + playerMove);
 

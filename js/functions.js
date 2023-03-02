@@ -13,9 +13,9 @@ function clearMessages(){
 }
 
 
-function displayResult(computerMove, playerMove) {
-	printMessage("Komputer losuje"+computerMove,+"a ja"+playerMove );
-	console.log("Wylosowane ruchy to:", getMoveName(moveId));
+function displayResult(computerMove, playerMove){
+	printMessage("Komputer losuje" + computerMove, + "a ja"+playerMove );
+	console.log("Wylosowane ruchy to:" + computerMove + playerMove );
 		if (computerMove == playerMove) {
 			printMessage("Remis");
 		}
@@ -37,10 +37,6 @@ function displayResult(computerMove, playerMove) {
 		if (computerMove == "nożyce" && playerMove == "kamień") {
 			printMessage("Wygrałeś!");
 		}
-		/*
-		if (playerMove != 1, 2, 3){ /*if it is not valid number 1-3
-			printMessage("Losuj ponownie");
-		} */
 		if (playerMove = "nieznanyRuch") {
 			printMessage("Losuj ponownie");
 		}
