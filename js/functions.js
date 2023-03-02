@@ -15,7 +15,7 @@ function clearMessages(){
 
 function displayResult(computerMove, playerMove) {
 	printMessage("Komputer losuje"+computerMove,+"a ja"+playerMove );
-	console.log("Wylosowane ruchy to:", computerMove, playerMove);
+	console.log("Wylosowane ruchy to:", getMoveName(moveId));
 		if (computerMove == playerMove) {
 			printMessage("Remis");
 		}

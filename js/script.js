@@ -50,13 +50,14 @@ function getMoveName(moveId) {
 
 }
 
-let playerMove = getMoveName(moveId);
 
 /*playerMove */
 
 console.log("NoughtAndCrosses");
 console.log("playerMove");
 console.log("Gracz wpisał: " + playerInput);
+/* console.log("Gracz wpisał: " + getMoveName(getMoveName) ); */
+let playerMove = getMoveName(moveId);
 
 /* printMessage("Wylosowałem:+playerMove); */
 
