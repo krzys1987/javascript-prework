@@ -9,7 +9,8 @@
 	function clearMessages(){
 		document.getElementById('messages').innerHTML = '';
 	}
-	function displayResult(computerMove, playerMove) {
+	let computerMove = getMoveName(moveId);
+    function displayResult(computerMove, playerMove) {
 		/* printMessage("Komputer losuje" + computerMove, + "a ja" + playerMove ); */
 		console.log("Wylosowane ruchy to:" + computerMove + playerMove );
 			if (computerMove == playerMove) {
