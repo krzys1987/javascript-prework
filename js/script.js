@@ -1,114 +1,89 @@
-/*computerMove */
-console.log("NoughtAndCrosses");
-console.log("computerMove");
-
+//computerMove//
 let randomNumber = Math.floor(Math.random() * 3 + 1);
-console.log("Wylosowana liczba to: " + randomNumber);
-
 let computerMove = getMoveName(randomNumber);
 
-function getMoveName(moveId) {
+function getMoveName(moveId){
 	if(moveId == 1){
-		printMessage("Wynik to ruch nr 1, czyli: ");
+		printMessage("Wylosowano ruch nr 1 ");
 		return "kamień";
 	} else if(moveId == 2){
-		printMessage("Wynik to ruch nr 2, czyli: ");
+		printMessage("Wylosowano ruch nr 2 ");
 		return "papier";
 	} else if(moveId == 3){
-		printMessage("Wynik to ruch nr 3, czyli: ");
+		printMessage("Wylosowano ruch nr 3 ");
 		return "nożyce";
 	} else {
-		printMessage("Nie wiem, co znaczy" + moveId );
+		printMessage("Niepoprawny+ruch" + moveId);
 		return "nieznanyRuch";
 	}
 
 }
 
-printMessage("Komputer losuje: " + computerMove);
-/*
-let computerMove = "nieznanyRuch";
-/*
-if(randomNumber == 1) {
-    printMessage("Ruch komputera nr 1");
-    computerMove = "kamień";
-} else if(randomNumber == 2) {
-    printMessage("Ruch komputera nr 2");
-    computerMove = "papier";
-} else if(randomNumber == 3) {
-    printMessage("Ruch komputera nr 3");
-    computerMove = "nożyce";
-}
-*/
+getMoveName(moveId, playerMove, computerMove);
 
-/* printMessage("Komputer losuje: " + computerMove);
-
-
-
-
-
-/*playerMove */
-
+//playerMove//
 let playerInput = prompt("Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.");
-let moveId = playerInput;
+let playerMove = getMoveName(playerInput);
 
-console.log("NoughtAndCrosses");
-console.log("playerMove");
-console.log("Gracz wpisał: " + playerInput);
-console.log(displayResult(playerInput));
+//Moves//
+console.log(computerMove) && printMessage(computerMove);
+console.log(playerMove) && printMessage(playerMove);
 
+//Functions//
 
-let playerMove = getMoveName(moveId);
+function displayResult(computerMove, playerMove){
+    if (computerMove == playerMove) {
+        printMessage("Remis")
+    } else if (computerMove == "papier" && playerMove == "kamień") {
+        printMessage("Przegrałeś!");
+    } else if (computerMove == "papier" && playerMove == "nożyce") {
+        printMessage("Wygrałeś!");
+    } else if (computerMove == "kamień" && playerMove == "papier") {
+        printMessage("Wygrałeś!");
+    } else if (computerMove == "kamień" && playerMove == "nożyce") {
+        printMessage("Przegrałeś!");
+    } else if (computerMove == "nożyce" && playerMove == "papier") {
+        printMessage("Przegrałeś!");
+    } else if (computerMove == "nożyce" && playerMove == "kamień") {
+        printMessage("Wygrałeś!");
+    } /* przweniesiony kod */ if(randomNumber == 1) {
+        printMessage("Ruch komputera nr 1");
+        computerMove = "kamień";
+    } else if(randomNumber == 2){
+        printMessage("Ruch komputera nr 2");
+        computerMove = "papier";
+    } else if(randomNumber == 3){
+        printMessage("Ruch komputera nr 3");
+        computerMove = "nożyce";
+    }
 
-printMessage("Mój wynik, to: " + playerMove);
-
-
-/* function playerMove = getMoveName(playerMove);
-
-/*
-let playerMove = "nieznanyRuch";
-
-if (playerInput == "1") {
-    printMessage("Mój ruch nr 3");
-    playerMove = "nożyce";
-} else if (playerInput == 2) {
-    playerMove = "papier";
-    printMessage("Mój ruch nr 2");
-} else if (playerInput == 3) {
-    playerMove = "kamień";
-    printMessage("Mój wynik o ruch nr 1");
-} else {
-    playerMove = "nieznanyRuch";
-    printMessage("Losuj ponownie");
 }
 
+displayResult(computerMove, playerMove);
 
 
+// coś innego //
+/* let computerMove = "nieznanyRuch" {
+    if(randomNumber == 1) {
+        printMessage("Ruch komputera nr 1");
+        computerMove = "kamień";
+    } else if(randomNumber == 2){
+        printMessage("Ruch komputera nr 2");
+        computerMove = "papier";
+    } else if(randomNumber == 3){
+        printMessage("Ruch komputera nr 3");
+        computerMove = "nożyce";
+     }
 */
-
-/* Results evaluation */
-
-/* wyświetlanie wyników rozwala wszystko,
-let displayResult(playerMove);
-*/
-
-if (computerMove == playerMove) {
-    printMessage("Remis")
-}
-if (computerMove == "papier" && playerMove == "kamień") {
-    printMessage("Przegrałeś!");
-}
-if (computerMove == "papier" && playerMove == "nożyce") {
-    printMessage("Wygrałeś!");
-}
-if (computerMove == "kamień" && playerMove == "papier") {
-    printMessage("Wygrałeś!");
-}
-if (computerMove == "kamień" && playerMove == "nożyce") {
-    printMessage("Przegrałeś!");
-}
-if (computerMove == "nożyce" && playerMove == "papier") {
-    printMessage("Przegrałeś!");
-}
-if (computerMove == "nożyce" && playerMove == "kamień") {
-    printMessage("Wygrałeś!");
-}
+// let playerMove = "nieznany ruch" {
+    /* if(playerMove == 1){
+        printMessage("Zagrałem kamień");
+        playerMove = "kamień";
+    } else if(playerMove == 2){
+        printMessage("Zagrałem papier");
+        playerMove = "papier";
+    } else if(playerMove == 3){
+        printMessage("Zagrałem nożyce");
+        playerMoce = "nożyce";
+    } */
+// }
