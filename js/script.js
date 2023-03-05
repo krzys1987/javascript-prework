@@ -1,3 +1,5 @@
+//info
+printMessage("Gra w kółko i krzyżyk") || console.log("Gra w kółko i krzyżyk");
 //computerMove//
 let randomNumber = Math.floor(Math.random() * 3 + 1);
 let computerMove = getMoveName(randomNumber);
@@ -19,15 +21,15 @@ function getMoveName(moveId){
 
 }
 
-getMoveName(moveId, playerMove, computerMove);
+// printMessage(getMoveName(randomNumber));
 
 //playerMove//
 let playerInput = prompt("Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.");
 let playerMove = getMoveName(playerInput);
 
 //Moves//
-console.log(computerMove) && printMessage(computerMove);
-console.log(playerMove) && printMessage(playerMove);
+console.log(computerMove) || printMessage("Komputer zagrał+" + computerMove);
+console.log(playerMove) || printMessage("A Ty zagrałeś" + playerMove);
 
 //Functions//
 
@@ -46,7 +48,7 @@ function displayResult(computerMove, playerMove){
         printMessage("Przegrałeś!");
     } else if (computerMove == "nożyce" && playerMove == "kamień") {
         printMessage("Wygrałeś!");
-    } /* przweniesiony kod */ if(randomNumber == 1) {
+    } else if(randomNumber == 1) {
         printMessage("Ruch komputera nr 1");
         computerMove = "kamień";
     } else if(randomNumber == 2){
@@ -56,14 +58,14 @@ function displayResult(computerMove, playerMove){
         printMessage("Ruch komputera nr 3");
         computerMove = "nożyce";
     }
-
 }
 
+printMessage("Gra skończona, w jej rezultacie...");
 displayResult(computerMove, playerMove);
 
-
-// coś innego //
-/* let computerMove = "nieznanyRuch" {
+// stary kod
+/*
+let computerMove = "nieznanyRuch" {
     if(randomNumber == 1) {
         printMessage("Ruch komputera nr 1");
         computerMove = "kamień";
@@ -75,15 +77,3 @@ displayResult(computerMove, playerMove);
         computerMove = "nożyce";
      }
 */
-// let playerMove = "nieznany ruch" {
-    /* if(playerMove == 1){
-        printMessage("Zagrałem kamień");
-        playerMove = "kamień";
-    } else if(playerMove == 2){
-        printMessage("Zagrałem papier");
-        playerMove = "papier";
-    } else if(playerMove == 3){
-        printMessage("Zagrałem nożyce");
-        playerMoce = "nożyce";
-    } */
-// }
