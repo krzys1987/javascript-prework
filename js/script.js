@@ -48,15 +48,6 @@ function displayResult(computerMove, playerMove){
         printMessage("Przegrałeś!");
     } else if (computerMove == "nożyce" && playerMove == "kamień") {
         printMessage("Wygrałeś!");
-    } else if(randomNumber == 1) {
-        printMessage("Ruch komputera nr 1");
-        computerMove = "kamień";
-    } else if(randomNumber == 2){
-        printMessage("Ruch komputera nr 2");
-        computerMove = "papier";
-    } else if(randomNumber == 3){
-        printMessage("Ruch komputera nr 3");
-        computerMove = "nożyce";
     }
 }
 
