@@ -14,8 +14,8 @@ console.log("Gra w kółko i krzyżyk");
  zagrajKamien.addEventListener('click', buttonClicked);
 
  //game
-function playGame(3){
-    playerInput();
+function playGame(playerInput) {
+    playerInput(3);
     //computerMove//
     let randomNumber = Math.floor(Math.random() * 3 + 1);
     let computerMove = getMoveName(randomNumber);
