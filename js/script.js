@@ -15,7 +15,15 @@ console.log("Gra w kółko i krzyżyk");
 
  //game
 function playGame(playerInput) {
-    playerInput(3);
+    document.getElementById('play-rock').addEventListener('click', function(){
+        playGame(1);
+        });
+        document.getElementById('play-paper').addEventListener('click', function(){
+            playGame(2);
+        });
+        document.getElementById('play-scissors').addEventListener('click', function(){
+            playGame(1);
+        });
     //computerMove//
     let randomNumber = Math.floor(Math.random() * 3 + 1);
     let computerMove = getMoveName(randomNumber);
