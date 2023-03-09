@@ -2,7 +2,7 @@
 printMessage("Gra w kółko i krzyżyk");
 console.log("Gra w kółko i krzyżyk");
 
- //buttons
+ //buttons and action
  function buttonClicked() {
     printMessage("Wybór został dokonany");
  }
@@ -12,6 +12,29 @@ console.log("Gra w kółko i krzyżyk");
  zagrajPapier.addEventListener('click', buttonClicked);
  let zagrajNozyce = document.getElementById("play-scissors");
  zagrajKamien.addEventListener('click', buttonClicked);
+
+ document.getElementById('play-rock').addEventListener('click', function(){
+    playGame(1);
+    });
+    document.getElementById('play-paper').addEventListener('click', function(){
+        playGame(2);
+    });
+    document.getElementById('play-scissors').addEventListener('click', function(){
+        playGame(3);
+    });
+
+/*
+
+document.getElementById("play-rock").addEventListener("click", function() {
+    printMessage("Zagrałem"+getMoveName)
+})
+document.getElementById("play-paper").addEventListener("click", function() {
+    printMessage("Zagrałem"+getMoveName)
+})
+document.getElementById("play-scissors").addEventListener("click", function() {
+    printMessage("Zagrałem"+getMoveName)
+})
+*/
 
  //game
 function playGame(playerInput) {
@@ -38,10 +61,10 @@ function playGame(playerInput) {
     ///let playerInput = prompt("Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.");
     let playerMove = getMoveName(playerInput);
     //Moves//
-    console.log(computerMove);
-    console.log(playerMove);
-    printMessage("Komputer zagrał+" + computerMove);
-    printMessage("A Ty zagrałeś" + playerMove);
+    console.log("Ruch komputera, to:" +" "+computerMove);
+    console.log("Twój ruch, to:" +" "+playerMove);
+    printMessage("Komputer zagrał" +" "+computerMove);
+    printMessage("A Ty zagrałeś" +" "+playerMove);
     //Functions//
     function displayResult(computerMove, playerMove){
         if (computerMove == playerMove) {
@@ -64,25 +87,7 @@ function playGame(playerInput) {
     displayResult(computerMove, playerMove);
 }
 
-document.getElementById('play-rock').addEventListener('click', function(){
-    playGame(1);
-    });
-    document.getElementById('play-paper').addEventListener('click', function(){
-        playGame(2);
-    });
-    document.getElementById('play-scissors').addEventListener('click', function(){
-        playGame(1);
-    });
-
 playGame(3);
 
-document.getElementById("play-rock").addEventListener("click", function() {
-    printMessage("Zagrałem"+getMoveName)
-})
-document.getElementById("play-paper").addEventListener("click", function() {
-    printMessage("Zagrałem"+getMoveName)
-})
-document.getElementById("play-scissors").addEventListener("click", function() {
-    printMessage("Zagrałem"+getMoveName)
-})
+
 
