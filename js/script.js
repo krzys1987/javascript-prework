@@ -58,7 +58,6 @@ function playGame(playerInput) {
         }
     }
     //playerMove//
-    ///let playerInput = prompt("Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.");
     let playerMove = getMoveName(playerInput);
     //Moves//
     console.log("Ruch komputera, to:" +" "+computerMove);
@@ -85,6 +84,7 @@ function playGame(playerInput) {
     }
     printMessage("Gra skończona, w jej rezultacie...");
     displayResult(computerMove, playerMove);
+    console.log("Gra skończona" + displayResult(playerMove));
 }
 
 playGame(3);
