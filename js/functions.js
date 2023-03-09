@@ -7,5 +7,4 @@
 		document.getElementById('messages').innerHTML = '';
 	}
 
-
-
+	

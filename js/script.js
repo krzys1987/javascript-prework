@@ -23,6 +23,10 @@ console.log("Gra w kółko i krzyżyk");
         playGame(3);
     });
 
+//Counting-Victories
+//document.getElementById('Wygrałeś!').addEventListener(playGame(playerInput)), printMessage("Ilość wygranych", printMessage(result));
+
+
 /*
 
 document.getElementById("play-rock").addEventListener("click", function() {
@@ -88,6 +92,10 @@ function playGame(playerInput) {
 }
 
 playGame(3);
+function result(msg){
+    printMessage("Dotyczas:");
+}
+
 
 
 
