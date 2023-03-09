@@ -15,15 +15,7 @@ console.log("Gra w kółko i krzyżyk");
 
  //game
 function playGame(playerInput) {
-    document.getElementById('play-rock').addEventListener('click', function(){
-        playGame(1);
-        });
-        document.getElementById('play-paper').addEventListener('click', function(){
-            playGame(2);
-        });
-        document.getElementById('play-scissors').addEventListener('click', function(){
-            playGame(1);
-        });
+    clearMessages();
     //computerMove//
     let randomNumber = Math.floor(Math.random() * 3 + 1);
     let computerMove = getMoveName(randomNumber);
@@ -42,7 +34,6 @@ function playGame(playerInput) {
             return "nieznanyRuch";
         }
     }
-    //printMessage(getMoveName(randomNumber));
     //playerMove//
     ///let playerInput = prompt("Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.");
     let playerMove = getMoveName(playerInput);
@@ -73,7 +64,18 @@ function playGame(playerInput) {
     displayResult(computerMove, playerMove);
 }
 
+document.getElementById('play-rock').addEventListener('click', function(){
+    playGame(1);
+    });
+    document.getElementById('play-paper').addEventListener('click', function(){
+        playGame(2);
+    });
+    document.getElementById('play-scissors').addEventListener('click', function(){
+        playGame(1);
+    });
+
 playGame(3);
+
 document.getElementById("play-rock").addEventListener("click", function() {
     printMessage("Zagrałem"+getMoveName)
 })
