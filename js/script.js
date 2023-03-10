@@ -3,7 +3,6 @@ alert("Gra w kółko i krzyżyk");
 printMessage("Gra w kółko i krzyżyk");
 console.log("Gra w kółko i krzyżyk");
 
-
 //buttons and action
 function buttonClicked() {
   printMessage("Wybór został dokonany");
@@ -27,14 +26,6 @@ document.getElementById("play-scissors").addEventListener("click", function() {
 
 //Counting-Victories
 
-/*
-      let computerWins = displayResult(computerMove, playerMove)
-      let playerWins = displayResult(computerMove, playerMove) {
-      } else if (computerMove == "kamień" && playerMove == "papier") {
-      } else if (computerMove == "kamień" && playerMove == "nożyce") {
-      } else if (computerMove == "nożyce" && playerMove == "kamień") {
-      } else if (computerMove == "nożyce" && playerMove == "kamień") {
-  */
 
 //game
 function playGame(playerInput) {
