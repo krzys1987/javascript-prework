@@ -4,7 +4,8 @@ printMessage("Gra w kółko i krzyżyk");
 console.log("Gra w kółko i krzyżyk");
 
 //buttons and action
-function buttonClicked() {
+
+/*function buttonClicked() {
   printMessage("Wybór został dokonany");
 }
 let playRock = document.getElementById("play-rock");
@@ -13,6 +14,7 @@ let playPaper = document.getElementById("play-paper");
 playPaper.addEventListener("click", buttonClicked);
 let playScissors = document.getElementById("play-scissors");
 playScissors.addEventListener("click", buttonClicked);
+*/
 
 document.getElementById("play-rock").addEventListener("click", function() {
   playGame(1);
