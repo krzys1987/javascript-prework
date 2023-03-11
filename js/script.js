@@ -5,25 +5,17 @@ console.log("Gra w kółko i krzyżyk");
 
 //buttons and action
 
-/*function buttonClicked() {
-  printMessage("Wybór został dokonany");
-}
-let playRock = document.getElementById("play-rock");
-playRock.addEventListener("click", buttonClicked);
-let playPaper = document.getElementById("play-paper");
-playPaper.addEventListener("click", buttonClicked);
-let playScissors = document.getElementById("play-scissors");
-playScissors.addEventListener("click", buttonClicked);
-*/
-
 document.getElementById("play-rock").addEventListener("click", function() {
   playGame(1);
+  alert("You have chosen"+" "+"but");
 });
 document.getElementById("play-paper").addEventListener("click", function() {
   playGame(2);
+  alert("You have chosen"+" "+"but")
 });
 document.getElementById("play-scissors").addEventListener("click", function() {
   playGame(3);
+  alert("You have chosen"+" "+"but")
 });
 
 //Counting-Victories
