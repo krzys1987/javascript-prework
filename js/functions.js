@@ -17,4 +17,5 @@
 
 		const playerWins = document.querySelector(".player-wins");
 		playerWins.innerHTML = playerWinsArg;
+		games.innerHTML = gamesArgs;
 	}

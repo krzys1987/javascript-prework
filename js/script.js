@@ -19,7 +19,9 @@ document.getElementById("play-scissors").addEventListener("click", function() {
 });
 
 //Counting-Victories
-
+let computerWins = 0;
+let playerWins = 0;
+let games = 0;
 
 //game
 function playGame(playerInput) {
@@ -55,25 +57,26 @@ function playGame(playerInput) {
       printMessage("Remis");
     } else if (computerMove == "papier" && playerMove == "kamień") {
       printMessage("Przegrałeś!");
+      computerWins + 1;
     } else if (computerMove == "papier" && playerMove == "nożyce") {
       printMessage("Wygrałeś!");
+      playerWins + 1;
     } else if (computerMove == "kamień" && playerMove == "papier") {
       printMessage("Wygrałeś!");
+      playerWins + 1;
     } else if (computerMove == "kamień" && playerMove == "nożyce") {
       printMessage("Przegrałeś!");
+      computerWins + 1;
     } else if (computerMove == "nożyce" && playerMove == "papier") {
       printMessage("Przegrałeś!");
+      computerWins + 1;
     } else if (computerMove == "nożyce" && playerMove == "kamień") {
       printMessage("Wygrałeś!");
+      playerWins +1;
     }
   }
 
   printMessage("Gra skończona, w jej rezultacie...");
   displayResult(computerMove, playerMove);
 }
-
-//Counting-Victories
-let computerWins = 0;
-let playerWins = 0;
-let games = 0;
 
