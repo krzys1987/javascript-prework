@@ -7,15 +7,15 @@ console.log("Gra w kółko i krzyżyk");
 
 document.getElementById("play-rock").addEventListener("click", function() {
   playGame(1);
-  alert("You have chosen"+" "+"but");
+
 });
 document.getElementById("play-paper").addEventListener("click", function() {
   playGame(2);
-  alert("You have chosen"+" "+"but")
+
 });
 document.getElementById("play-scissors").addEventListener("click", function() {
   playGame(3);
-  alert("You have chosen"+" "+"but")
+
 });
 
 //Counting-Victories
@@ -70,7 +70,10 @@ function playGame(playerInput) {
 
   printMessage("Gra skończona, w jej rezultacie...");
   displayResult(computerMove, playerMove);
-  console.log("Gra skończona" + displayResult(playerMove));
 }
 
-//playGame(playerInput);
+//Counting-Victories
+let computerWins = 0;
+let playerWins = 0;
+let games = 0;
+

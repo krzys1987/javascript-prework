@@ -7,4 +7,14 @@
 		document.getElementById('messages').innerHTML = '';
 	}
 
-	
+	function updateResults(gamesArgs, computerWinsArg, playerWinsArg) {
+		const games = document.querySelector(".games");
+		games.innerHTML = gamesArgs;
+
+		const computerWins = document.querySelector(".computer-wins");
+		computerWins.innerHTML = computerWinsArg;
+		games.innerHTML = gamesArgs;
+
+		const playerWins = document.querySelector(".player-wins");
+		playerWins.innerHTML = playerWinsArg;
+	}
